@@ -15,6 +15,7 @@ window.addEventListener('load', function(){
     
     btnIngresar.addEventListener('click', function(){
         
+        
         // validar campos de entrada
         if(tipoDocumento.value === null || tipoDocumento.value.trim() === '' || 
             numeroDocumento.value === null || numeroDocumento.value.trim() === '' || 
@@ -41,7 +42,7 @@ function ocultarAlerta() {
 }
 
 async function autenticar() {
-    const url = 'http://localhost:8082/login/autenticar-async'; 
+    const url = 'http://localhost:8081/autenticacion/autenticar-feign'; 
     const data = {
         tipoDocumento: tipoDocumento.value,
         numeroDocumento: numeroDocumento.value,
